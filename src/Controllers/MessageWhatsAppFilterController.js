@@ -8,15 +8,15 @@ const messageWhatsAppFilter = async ({ messageWhatsapp, io }) => {
   let result = await findAllKeyWords()
   if (!result.length) return
   let message = ''
-  // result.map(item => {
-  //   if(String(messageWhatsapp.body).toLowerCase().includes(String(item.word).toLowerCase().trim())){
-  //     message = String(messageWhatsapp.body)
-  //   }else {
-  //     message = ''
-  //     console.log('Not found!')
-  //   }
-  // })
-  message = messageWhatsapp.body
+  result.map(item => {
+    if(String(messageWhatsapp.body).toLowerCase().includes(String(item.word).toLowerCase().trim())){
+      message = String(messageWhatsapp.body)
+    }else {
+      message = ''
+      //console.log('Not found!')
+    }
+  })
+  //message = messageWhatsapp.body
   if (message && message.length > 0) {
     let data = {
       id: messageWhatsapp.id,
