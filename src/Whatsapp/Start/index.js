@@ -17,7 +17,12 @@ const start = ({ response, io }) => {
   /** Check Session */
   let sessionData = checkFileExists()
 
-  client = new Client({ puppeteer: { headless: true }, session: sessionData })
+  client = new Client({ puppeteer: 
+    { 
+      headless: true,
+      args: ['--no-sandbox']
+    }, 
+    session: sessionData })
 
   client.on('qr', qr => {
     qrcode.generate(qr, { small: true }, (qrcode) => {
