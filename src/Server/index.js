@@ -12,9 +12,10 @@ const mongoose = require('mongoose')
 const port = process.env.PORT || 9999
 /** Route Main */
 const wpRoute = require('../Routes/wpRoute')(io) //Dependency injection
+require('dotenv').config()
 require('../Socket/Connection')(io) //Dependency injection
 /** Data base connection */
-mongoose.connect(String(process.env.ENDPOINT_MONGO))
+mongoose.connect(`mongodb+srv://${String(process.env.MONGO_USER)}:${String(process.env.MONGO_PASS)}@cluster0-5qx8r.mongodb.net/sigiml?retryWrites=true&w=majority`)
 
 //  Adicionar e configurar middleware
 app.use(session({
