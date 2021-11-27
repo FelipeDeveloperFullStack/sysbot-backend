@@ -14,7 +14,7 @@ const port = process.env.PORT || 9999
 const wpRoute = require('../Routes/wpRoute')(io) //Dependency injection
 require('../Socket/Connection')(io) //Dependency injection
 /** Data base connection */
-mongoose.connect(`mongodb+srv://admin:admin@cluster0-5qx8r.mongodb.net/sigiml?retryWrites=true&w=majority`)
+mongoose.connect(process.env.ENDPOINT_MONGO)
 
 //  Adicionar e configurar middleware
 app.use(session({
