@@ -1,6 +1,6 @@
-<h2 align="center">
+<h3 align="center">
     🚀 [Frontend] - Sistema para monitoramento de grupos de Whatsapp de acordo com a palavra chave informada, backend para comunicação com o Frontend do SysBot, sistema para monitoramento de grupos no Whatsapp
-</h2>
+</h3>
 
 <p align="center">
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/FelipeDeveloperFullStack/sysbot-backend">
