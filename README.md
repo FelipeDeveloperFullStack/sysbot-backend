@@ -1,5 +1,5 @@
 <h3 align="center">
-    🚀 [Frontend] - Sistema para monitoramento de grupos de Whatsapp de acordo com a palavra chave informada, backend para comunicação com o Frontend do SysBot, sistema para monitoramento de grupos no Whatsapp
+    🚀 [Backend] - Sistema para monitoramento de grupos de Whatsapp de acordo com a palavra chave informada, backend para comunicação com o Frontend do SysBot, sistema para monitoramento de grupos no Whatsapp
 </h3>
 
 <p align="center">
